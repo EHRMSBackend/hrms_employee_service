@@ -7,7 +7,7 @@ WORKDIR /app
 
 # Copy package file and install dependencies
 COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile --prod
+RUN pnpm install --frozen-lockfile 
 
 # Copy the rest of the a    pplication code
 COPY . .
