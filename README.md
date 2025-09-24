@@ -36,13 +36,16 @@ Git
 Local Development Setup
 Clone the repository
 
-bash
+```
 git clone https://github.com/EHRMSBackend/hrms_employee_service.git
 cd hrms_employee_service
+```
+
 Install dependencies
 
-bash
+```
 pnpm install
+```
 Set up environment variables (see next section)
 
 Environment Configuration
@@ -138,28 +141,41 @@ Development Mode
 
 pnpm install
 ```
+## install prisma and prisma client
+```
+pnpm install prisma @prisma/client
+```
 
-# Start in development mode with hot reload
+## generate the prisma client
+```
+npx prisma generate
+```
+## Make and apply migrations
+
+```
+npx prisma migrate
+```
+
+## Start in development mode with hot reload
 ```
 pnpm run start:dev
 ```
 Production Mode
-bash
-# Build the application
+## Build the application
 ```
 pnpm run build
 ```
 
-# Start in production mode
+## Start in production mode
 ```
 pnpm run start:prod
 ```
 Available Scripts
-pnpm run start:dev - Start development server
+* pnpm run start:dev - Start development server
 
-pnpm run build - Build the application
+* pnpm run build - Build the application
 
-pnpm run start:prod - Start production server
+* pnpm run start:prod - Start production server
 
 
 Docker Deployment
