@@ -9,6 +9,7 @@ import { CompanySettingModule } from './modules/company-settings/company-setting
 
 @Module({
   imports: [
+    
     ClientsModule.register([
       {
         name: "AUTH_CLIENT",

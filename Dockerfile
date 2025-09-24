@@ -40,4 +40,4 @@ RUN pnpm add prisma
 # Expose the application port
 # for gateway 3000
 
-CMD ["pnpm", "run", "start:prod"] # assuming you have start prod in package.json
+CMD sh -c "pnpm prisma migrate deploy && pnpm run start:prod"
